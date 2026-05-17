@@ -250,8 +250,8 @@ Configurar:
 
 ```env
 NEXT_PUBLIC_API_BASE_URL=https://sua-api-publica
-NEXT_PUBLIC_WOKWI_EMBED_URL=https://wokwi.com/projects/SEU_PROJETO
-NEXT_PUBLIC_WOKWI_EMBED_VERSION=versao-do-circuito
+NEXT_PUBLIC_WOKWI_EMBED_URL=https://wokwi.com/projects/464213642678693889/embed
+NEXT_PUBLIC_WOKWI_EMBED_VERSION=2026-05-17-switch-leds
 ```
 
 O frontend é publicado a partir da pasta `frontend/` como projeto Next.js. A
