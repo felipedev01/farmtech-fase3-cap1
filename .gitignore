@@ -1,0 +1,29 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Ambiente local
+.env
+backend/.env
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.production.local
+
+# Testes e caches locais
+backend/.pytest_cache/
+.pytest_cache/
+
+# Logs locais
+logs/
+*.log
+backend/*.log
+frontend/*.log
+
+# Dependencias e builds locais
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+wokwi/.pio/

@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: farmtech-fase3-cap1-api
+    runtime: python
+    plan: free
+    buildCommand: cd backend && pip install -r requirements.txt
+    startCommand: cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: ORACLE_HOST
+        sync: false
+      - key: ORACLE_PORT
+        sync: false
+      - key: ORACLE_SERVICE
+        sync: false
+      - key: ORACLE_USER
+        sync: false
+      - key: ORACLE_PASSWORD
+        sync: false
+      - key: FRONTEND_ORIGINS
+        sync: false

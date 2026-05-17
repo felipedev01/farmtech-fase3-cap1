@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "author": "FarmTech Solutions",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -96,
+      "left": 202,
+      "attrs": {
+        "temperature": "26",
+        "humidity": "62"
+      }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 112,
+      "left": 220,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "potPh",
+      "top": 212,
+      "left": 205,
+      "attrs": {
+        "value": "512"
+      }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "btnN",
+      "top": -118,
+      "left": -154,
+      "attrs": {
+        "label": "N",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "btnP",
+      "top": -62,
+      "left": -154,
+      "attrs": {
+        "label": "P",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "btnK",
+      "top": -6,
+      "left": -154,
+      "attrs": {
+        "label": "K",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "btnPump",
+      "top": 72,
+      "left": -154,
+      "attrs": {
+        "label": "Bomba",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "btnCultureA",
+      "top": 154,
+      "left": -164,
+      "attrs": {
+        "label": "Cultura A",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "btnCultureB",
+      "top": 214,
+      "left": -164,
+      "attrs": {
+        "label": "Cultura B",
+        "bounce": "0"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledPump",
+      "top": 292,
+      "left": 40,
+      "attrs": {
+        "color": "blue",
+        "label": "Bomba"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledBtnN",
+      "top": -106,
+      "left": -62,
+      "attrs": {
+        "color": "green",
+        "label": "N"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledBtnP",
+      "top": -50,
+      "left": -62,
+      "attrs": {
+        "color": "blue",
+        "label": "P"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledBtnK",
+      "top": 6,
+      "left": -62,
+      "attrs": {
+        "color": "orange",
+        "label": "K"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledBtnPump",
+      "top": 84,
+      "left": -62,
+      "attrs": {
+        "color": "red",
+        "label": "Botao Bomba"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledBtnCultureA",
+      "top": 166,
+      "left": -62,
+      "attrs": {
+        "color": "purple",
+        "label": "Cultura A"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledBtnCultureB",
+      "top": 226,
+      "left": -62,
+      "attrs": {
+        "color": "purple",
+        "label": "Cultura B"
+      }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "esp:3V3", "dht1:VCC", "red", [] ],
+    [ "esp:GND.1", "dht1:GND", "black", [] ],
+    [ "esp:D15", "dht1:SDA", "green", [] ],
+    [ "esp:3V3", "ldr1:VCC", "red", [] ],
+    [ "esp:GND.1", "ldr1:GND", "black", [] ],
+    [ "esp:D34", "ldr1:AO", "green", [] ],
+    [ "esp:3V3", "potPh:VCC", "red", [] ],
+    [ "esp:GND.1", "potPh:GND", "black", [] ],
+    [ "esp:D35", "potPh:SIG", "green", [] ],
+    [ "esp:D18", "btnN:2", "green", [] ],
+    [ "esp:GND.1", "btnN:3", "black", [] ],
+    [ "esp:D19", "btnP:2", "blue", [] ],
+    [ "esp:GND.1", "btnP:3", "black", [] ],
+    [ "esp:D21", "btnK:2", "orange", [] ],
+    [ "esp:GND.1", "btnK:3", "black", [] ],
+    [ "esp:D22", "btnPump:2", "red", [] ],
+    [ "esp:GND.1", "btnPump:3", "black", [] ],
+    [ "esp:D25", "btnCultureA:2", "purple", [] ],
+    [ "esp:GND.1", "btnCultureA:3", "black", [] ],
+    [ "esp:D26", "btnCultureB:2", "purple", [] ],
+    [ "esp:GND.1", "btnCultureB:3", "black", [] ],
+    [ "esp:D23", "ledPump:A", "blue", [] ],
+    [ "esp:GND.1", "ledPump:C", "black", [] ],
+    [ "esp:3V3", "ledBtnN:A", "red", [] ],
+    [ "ledBtnN:C", "btnN:2", "green", [] ],
+    [ "esp:3V3", "ledBtnP:A", "red", [] ],
+    [ "ledBtnP:C", "btnP:2", "blue", [] ],
+    [ "esp:3V3", "ledBtnK:A", "red", [] ],
+    [ "ledBtnK:C", "btnK:2", "orange", [] ],
+    [ "esp:3V3", "ledBtnPump:A", "red", [] ],
+    [ "ledBtnPump:C", "btnPump:2", "red", [] ],
+    [ "esp:3V3", "ledBtnCultureA:A", "red", [] ],
+    [ "ledBtnCultureA:C", "btnCultureA:2", "purple", [] ],
+    [ "esp:3V3", "ledBtnCultureB:A", "red", [] ],
+    [ "ledBtnCultureB:C", "btnCultureB:2", "purple", [] ]
+  ],
+  "dependencies": {}
+}
