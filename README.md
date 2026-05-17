@@ -195,6 +195,18 @@ Repositorio oficial da entrega:
 https://github.com/felipedev01/farmtech-fase3-cap1
 ```
 
+Frontend publicado:
+
+```text
+https://farmtech-fase3-cap1.vercel.app
+```
+
+API prevista no Render:
+
+```text
+https://farmtech-fase3-cap1-api.onrender.com
+```
+
 ### Backend Render
 
 Configurar variáveis em segredo:
