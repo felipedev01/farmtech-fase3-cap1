@@ -207,6 +207,12 @@ API prevista no Render:
 https://farmtech-fase3-cap1-api.onrender.com
 ```
 
+Status validado em produção:
+
+- frontend Vercel: `/`, `/dados` e `/circuito` respondendo HTTP 200;
+- API Render: `/health`, `/health/db` e `/sensor-readings` respondendo HTTP 200;
+- proxy do frontend: `/api/backend/health/db` respondendo com Oracle `ok`.
+
 ### Backend Render
 
 Configurar variáveis em segredo:
