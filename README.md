@@ -213,6 +213,14 @@ Status validado em produção:
 - API Render: `/health`, `/health/db` e `/sensor-readings` respondendo HTTP 200;
 - proxy do frontend: `/api/backend/health/db` respondendo com Oracle `ok`.
 
+## Vídeo demonstrativo
+
+O vídeo de apresentação da entrega está publicado no YouTube como não listado:
+
+```text
+https://youtu.be/mUYsJtyPqK0?si=dBrWyCdEBBrYaDLl
+```
+
 ### Backend Render
 
 Configurar variáveis em segredo:
