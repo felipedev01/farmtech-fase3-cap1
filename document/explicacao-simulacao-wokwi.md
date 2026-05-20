@@ -433,7 +433,7 @@ Depois de ler os componentes, o ESP32 monta um JSON e envia para a API configura
 A URL base atual e:
 
 ```cpp
-const char *API_BASE_URL = "https://superior-player-valued-titans.trycloudflare.com";
+const char *API_BASE_URL = "https://farmtech-fase3-cap1-api.onrender.com";
 ```
 
 O endpoint completo e montado no código:

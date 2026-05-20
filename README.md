@@ -56,7 +56,7 @@ Arquivos principais:
 No `wokwi/sketch.ino`, ajustar a URL da API:
 
 ```cpp
-const char *API_BASE_URL = "https://sua-api-publica.onrender.com";
+const char *API_BASE_URL = "https://farmtech-fase3-cap1-api.onrender.com";
 ```
 
 Para teste local a partir do Wokwi:
@@ -240,8 +240,8 @@ versionar o arquivo `backend/.env`.
 Após publicar, validar:
 
 ```text
-https://sua-api-publica/health
-https://sua-api-publica/health/db
+https://farmtech-fase3-cap1-api.onrender.com/health
+https://farmtech-fase3-cap1-api.onrender.com/health/db
 ```
 
 ### Frontend Vercel
@@ -249,7 +249,7 @@ https://sua-api-publica/health/db
 Configurar:
 
 ```env
-NEXT_PUBLIC_API_BASE_URL=https://sua-api-publica
+NEXT_PUBLIC_API_BASE_URL=https://farmtech-fase3-cap1-api.onrender.com
 NEXT_PUBLIC_WOKWI_EMBED_URL=https://wokwi.com/projects/464213642678693889/embed
 NEXT_PUBLIC_WOKWI_EMBED_VERSION=2026-05-17-switch-leds
 ```

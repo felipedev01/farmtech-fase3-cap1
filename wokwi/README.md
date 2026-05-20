@@ -47,16 +47,16 @@ Esse acesso local exige o Wokwi Private IoT Gateway habilitado. Sem o gateway,
 use uma API pública em Render/Railway, porque o gateway público do Wokwi não
 acessa serviços locais da máquina.
 
-Para deploy, use a URL pública do Render ou Railway, por exemplo:
+Para deploy, use a URL pública do Render:
 
 ```cpp
-const char *API_BASE_URL = "https://farmtech-cap1-api.onrender.com";
+const char *API_BASE_URL = "https://farmtech-fase3-cap1-api.onrender.com";
 ```
 
-Neste projeto, a URL atual preservada para a simulação é:
+Neste projeto, a URL atual da simulação é:
 
 ```cpp
-const char *API_BASE_URL = "https://superior-player-valued-titans.trycloudflare.com";
+const char *API_BASE_URL = "https://farmtech-fase3-cap1-api.onrender.com";
 ```
 
 ## Payload enviado

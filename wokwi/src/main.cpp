@@ -8,10 +8,10 @@ const char *WIFI_SSID = "Wokwi-GUEST";
 const char *WIFI_PASSWORD = "";
 
 // Use the public backend URL after deploy, for example:
-// https://farmtech-cap1-api.onrender.com
+// https://farmtech-fase3-cap1-api.onrender.com
 // For local tests from Wokwi with the Private IoT Gateway enabled:
 // http://host.wokwi.internal:8001
-const char *API_BASE_URL = "https://superior-player-valued-titans.trycloudflare.com";
+const char *API_BASE_URL = "https://farmtech-fase3-cap1-api.onrender.com";
 const char *DEVICE_ID = "wokwi-esp32-cap1";
 
 const unsigned long SEND_INTERVAL_MS = 15000;

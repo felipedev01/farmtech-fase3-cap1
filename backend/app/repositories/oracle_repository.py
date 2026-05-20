@@ -2,10 +2,13 @@ from __future__ import annotations
 
 from datetime import datetime
 from typing import Any
+from zoneinfo import ZoneInfo
 
 import oracledb
 
 from app.db.oracle import get_connection
+
+SAO_PAULO_TZ = ZoneInfo("America/Sao_Paulo")
 
 
 def _rows_to_dicts(cursor: oracledb.Cursor, rows: list[tuple[Any, ...]]) -> list[dict[str, Any]]:
@@ -39,7 +42,7 @@ class OracleRepository:
             return result
 
     def create_sensor_reading(self, data: dict[str, Any]) -> dict[str, Any]:
-        created_at = data.get("created_at") or datetime.now()
+        created_at = data.get("created_at") or datetime.now(SAO_PAULO_TZ).replace(tzinfo=None)
         params = {
             **data,
             "created_at": created_at,
